@@ -1,0 +1,13 @@
+﻿@page
+@using RazorDependencyInjection.Services
+@model IndexModel
+@inject ILuckyNumberService luckyNumberService;
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Your lucky number is: <b>@Model.LuckyNumber</b></p>
+    <p>Your lucky number is: <b>@luckyNumberService.GetMyLuckyNumber()</b></p>
+</div>

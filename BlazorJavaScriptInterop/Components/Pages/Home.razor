@@ -1,0 +1,25 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@inject IJSRuntime JS
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, JavaScript!</h1>
+
+<button class="btn btn-primary" @onclick="SendMessage">Show Message</button>
+<button class="btn btn-secondary" @onclick="CalculateAge">Calculate Age</button>
+Age: @Age
+
+@code {
+    public int Age { get; set; }
+
+    public async Task SendMessage()
+    {
+        await JS.InvokeVoidAsync("showMessage", new object[] { "Executing JS!" });
+    }
+
+    public async Task CalculateAge()
+    {
+        Age = await JS.InvokeAsync<int>("calculateAge", new object[] { "1990" });
+    }
+}

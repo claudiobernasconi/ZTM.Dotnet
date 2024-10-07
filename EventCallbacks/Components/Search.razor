@@ -1,0 +1,19 @@
+﻿@rendermode InteractiveServer
+
+<div style="display: flex; align-items: center">
+    <input type="text" @bind="Text" class="form-control" />
+    <button @onclick="SearchClicked" style="margin-left: 5px;" class="btn btn-primary">Search</button>
+</div>
+
+
+@code {
+    public string Text { get; set; } = "";
+
+    [Parameter, EditorRequired]
+    public EventCallback<string> OnSearch { get; set; }
+
+    public async Task SearchClicked()
+    {
+        await OnSearch.InvokeAsync(Text);
+    }
+}

@@ -1,0 +1,16 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<Search OnSearch="OnSearch" />
+You searched for: @SearchText
+
+@code {
+    public string SearchText { get; set; } = "";
+
+    public void OnSearch(string text)
+    {
+        SearchText = text;
+    }
+}

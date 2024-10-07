@@ -1,0 +1,28 @@
+﻿@using MVCViewComponents.Services
+@model IEnumerable<Product>
+
+@{
+    var products = Model;
+}
+
+<div style="display: flex; flex-direction: column;">
+    <h2>Top Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,29 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using QuickGrid.Service
+@inject IDriversService DriversService
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+
+<PageTitle>Home</PageTitle>
+
+<h3>2024 Formula 1 Drivers</h3>
+
+<QuickGrid Items="Drivers" Pagination="Pagination">
+    <PropertyColumn Title="Name" Property="@(d => d.Name)" />
+    <PropertyColumn Title="Country" Property="@(d => d.Country)" />
+    <PropertyColumn Title="Team" Property="@(d => d.Team)" Sortable="true" />
+    <PropertyColumn Title="Date of Birth" Property="@(d => d.DateOfBirth.ToString("d"))" Sortable="true" />
+</QuickGrid>
+<Paginator State="Pagination" />
+
+@code {
+    public IQueryable<Driver>? Drivers { get; set; } = null;
+    public PaginationState Pagination { get; set; } = new PaginationState { ItemsPerPage = 10 };
+
+    protected override void OnInitialized()
+    {
+        Drivers = DriversService.GetDrivers().AsQueryable();
+
+        base.OnInitialized();
+    }
+}

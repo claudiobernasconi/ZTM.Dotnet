@@ -1,0 +1,13 @@
+﻿@page "/employees/{id:int}/{name?}"
+
+<h3>EmployeeDetail</h3>
+
+<p>Employee Id: @Id</p>
+
+@code {
+    [Parameter]
+    public required int Id { get; set; }
+
+    [Parameter]
+    public string? Name { get; set; }
+}

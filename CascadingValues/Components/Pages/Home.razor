@@ -1,0 +1,16 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Bicycle World</h1>
+
+<p style="margin-bottom: 20px">Welcome to the Bicycle World.</p>
+
+<CascadingValue Value="BikeInfo" Name="Bike" IsFixed>
+    <Bicycle></Bicycle>
+</CascadingValue>
+
+@code {
+    public BikeInfo BikeInfo { get; set; } = new BikeInfo("Canyon", "Endurace CF 7");
+}
+

@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Sign in</h1>
+    
+    <form method="post">
+        <div style="display: flex; justify-content: center">
+            <div style="display: grid; grid-gap: 5px; width: 300px">
+                <input type="text" class="form-control" name="username" placeholder="username" />
+                <input type="password" class="form-control" name="password" placeholder="password" />
+                <button type="submit" class="btn btn-primary" style="width: 80px;margin-top: 5px">Sign in</button>
+            </div>
+        </div>
+    </form>
+    <div>Logged in user: @Model.Username</div>
+</div>

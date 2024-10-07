@@ -1,0 +1,24 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>People</h1>
+<ul>
+@foreach (var person in Persons)
+{
+    <li>@person.FirstName @person.LastName</li>
+}
+</ul>
+
+@code {
+    public List<Person> Persons { get; set; } = new List<Person>
+    {
+        new Person("Claudio", "Bernasconi"),
+        new Person("Roger", "Federer" ),
+        new Person("Stephen", "Curry"),
+        new Person("Patrick", "Mahomes")
+    };
+
+    public record Person(string FirstName, string LastName);
+}

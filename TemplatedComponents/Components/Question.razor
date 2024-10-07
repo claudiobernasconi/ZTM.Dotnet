@@ -1,0 +1,10 @@
+﻿<h3 style="color: chocolate; font-size: 48px">@Title</h3>
+<div style="color: brown; font-size: 14px; margin-bottom: 20px;">@Content</div>
+
+@code {
+    [Parameter]
+    public required string Title { get; set; }
+
+    [Parameter]
+    public required RenderFragment Content { get; set; }
+}

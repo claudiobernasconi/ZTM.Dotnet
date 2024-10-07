@@ -1,0 +1,20 @@
+﻿@page "/"
+@inject ILogger<Home> Logger
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@code {
+    protected override void OnInitialized()
+    {
+        Logger.LogTrace("Trace");
+        Logger.LogDebug("Debug");
+        Logger.LogInformation("Information");
+        Logger.LogWarning("Warning");
+        Logger.LogError("Error");
+        Logger.LogCritical("Critical");
+    }
+}

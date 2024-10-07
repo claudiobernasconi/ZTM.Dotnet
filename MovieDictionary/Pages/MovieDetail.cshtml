@@ -1,0 +1,14 @@
+﻿@page "{movieId:int}"
+@model MovieDictionary.Pages.MovieDetailModel
+@{
+    ViewData["Title"] = Model.Movie.Title;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Movie.Title</h1>
+    <p>
+        <b>Rating:</b> @Model.Movie.Rating<br />
+        <b>Release:</b> @Model.Movie.Year
+    </p>
+    <img class="movie-img" src="@($"/img/movie_{Model.Movie.MovieId}.jpg")" />
+</div>

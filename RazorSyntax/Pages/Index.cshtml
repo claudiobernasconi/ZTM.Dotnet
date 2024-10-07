@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model.FirstName</h1>
+
+    <p>In 6 hours the time is: @(DateTime.Now + TimeSpan.FromHours(6))</p>
+
+    @if (Model.FirstName == "Claudio")
+    {
+        <div>You are the course creator.</div>
+    }
+    else
+    {
+        <div>You are a student learning ASP.NET Core Razor Pages.</div>
+    }
+</div>

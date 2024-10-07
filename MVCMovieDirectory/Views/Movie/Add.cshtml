@@ -1,0 +1,30 @@
+﻿@using MVCForms.Models
+@model AddMovieViewModel
+@{
+    ViewData["Title"] = "New Movie";
+}
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Add a New Movie</h1>
+    <p><a asp-controller="Home" asp-action="Index">The best movies ever!</a></p>
+
+    <form method="post" asp-action="Add">
+        <div class="new-movie-container">
+            <div class="new-movie-fields">
+                <input asp-for="Title" placeholder="@nameof(Model.Title)" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+                <input asp-for="Year" placeholder="@nameof(Model.Year)" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+                <input asp-for="Rating" placeholder="@nameof(Model.Rating)" class="form-control" />
+                <span asp-validation-for="Rating" class="text-danger"></span>
+                <button type="submit" class="btn btn-primary" style="width: 120px;margin-top: 5px">Add Movie</button>
+            </div>
+        </div>
+    </form>
+</div>

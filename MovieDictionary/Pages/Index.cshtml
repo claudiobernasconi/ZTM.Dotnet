@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Top 20 Movies";
+    var movieRank = 1;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Best Movies</h1>
+    <p>This movie dictionary contains the best movies ever made. There is no debate. ;-)<br />
+        <a asp-page="/NewMovie">Add a new movie</a> to the list.
+    </p>
+
+    <div class="movies-overview">
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var movie in Model.Movies)
+                {
+                    <tr>
+                        <td class="movie-item">@movieRank</td>
+                        <td class="movie-item"><a asp-page="MovieDetail" asp-route-movieId="@movie.MovieId">@movie.Title</a></td>
+                        <td class="movie-item">@movie.Year</td>
+                        <td class="movie-item">@movie.Rating</td>
+                    </tr>
+                    movieRank++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

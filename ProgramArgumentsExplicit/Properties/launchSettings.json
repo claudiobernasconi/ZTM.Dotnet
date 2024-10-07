@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ProgramArgumentsExplicit": {
+      "commandName": "Project",
+      "commandLineArgs": "Claudio"
+    }
+  }
+}

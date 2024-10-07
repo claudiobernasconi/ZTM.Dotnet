@@ -1,0 +1,33 @@
+﻿<div style="max-width: 400px">
+    @if (!_isLoggedIn)
+    {
+        <div style="margin-bottom: 15px;">
+            <div>Username</div>
+            <div>
+                <input class="form-control" type="text" />
+            </div>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <div>Password</div>
+            <div>
+                <input class="form-control" type="password" />
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary" @onclick="OnLogin">Login</button>
+        </div>
+    }
+    else
+    {
+        <div class="message">You are logged in.</div>
+    }
+</div>
+
+@code {
+    private bool _isLoggedIn = false;
+
+    public void OnLogin()
+    {
+        _isLoggedIn = true;
+    }
+}

@@ -1,0 +1,58 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, forms!</h1>
+
+@if (!_isSubmitted)
+{
+    <EditForm Model="Employee" OnValidSubmit="@OnSubmit">
+        <DataAnnotationsValidator />
+        
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <InputText class="form-control" id="firstName" @bind-Value="Employee.FirstName" />
+            <ValidationMessage For="@(() => Employee.FirstName)" />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <InputText class="form-control" id="lastName" @bind-Value="Employee.LastName" />
+            <ValidationMessage For="@(() => Employee.LastName)" />
+        </div>
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <InputDate class="form-control" id="dateOfBirth" @bind-Value="Employee.DateOfBirth" />
+            <ValidationMessage For="@(() => Employee.DateOfBirth)" />
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary</label>
+            <InputNumber class="form-control" id="salary" @bind-Value="Employee.Salary" />
+            <ValidationMessage For="@(() => Employee.Salary)" />
+        </div>
+        <div style="margin-top: 15px">
+            <button class="btn btn-primary" type="submit">Save Employee</button>
+            <button class="btn btn-secondary" style="margin-left: 5px" type="reset">Reset</button>
+        </div>
+        @* <ValidationSummary /> *@
+    </EditForm>
+}
+else
+{
+    <div style="margin-bottom: 15px">The new employee has been added.</div>
+    <div>
+        <b>@Employee.FirstName @Employee.LastName</b><br />
+        @Employee.DateOfBirth.ToShortDateString()<br />
+        @Employee.Salary.ToString("C")
+    </div>
+}
+
+@code {
+    private bool _isSubmitted = false;
+    public Employee Employee { get; set; } = new Employee();
+
+    public void OnSubmit()
+    {
+        _isSubmitted = true;
+    }
+}

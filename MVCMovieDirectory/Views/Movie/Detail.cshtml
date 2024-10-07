@@ -1,0 +1,14 @@
+﻿@model MovieDetailViewModel
+@{
+    ViewData["Title"] = Model.PageTitle;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Title</h1>
+    <p>
+        <b>Rating:</b> @Model.Rating<br />
+        <b>Release:</b> @Model.Year
+    </p>
+    <img class="movie-img" src="@Model.ImageUrl" />
+</div>
+

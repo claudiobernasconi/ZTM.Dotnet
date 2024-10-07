@@ -1,0 +1,28 @@
+﻿@model ContactFormModel
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+<h2>Contact</h2>
+
+<form asp-action="Index" method="post">
+    <div class="row">
+        <label class="label" asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger" />
+    </div>
+    <div class="row">
+        <label class="label" asp-for="Email"></label>
+        <input class="form-control" asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger" />
+    </div>
+    <div class="row">
+        <label class="label" asp-for="Message"></label>
+        <textarea class="form-control" asp-for="Message"></textarea>
+        <span asp-validation-for="Message" class="text-danger" />
+    </div>
+    <button class="btn btn-primary" type="submit">Send</button>
+</form>

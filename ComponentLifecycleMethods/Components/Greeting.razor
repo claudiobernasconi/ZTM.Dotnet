@@ -1,0 +1,13 @@
+﻿<div>@Message</div>
+
+@code {
+    [Parameter]
+    public string Name { get; set; }
+
+    public string Message { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Message = $"Hello, {Name}!";
+    }
+}

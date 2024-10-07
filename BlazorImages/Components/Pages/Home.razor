@@ -1,0 +1,13 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<img src="@ImageSource" style="width: 600px;" alt="Oven" />
+
+@code {
+    public string ImageSource { get; set; } = "images/oven.jpg"; // do not use user input to create the file path!
+}

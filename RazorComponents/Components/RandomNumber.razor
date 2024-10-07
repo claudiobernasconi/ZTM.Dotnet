@@ -1,0 +1,11 @@
+﻿<div>@LuckyNumber</div>
+
+@code {
+    public int LuckyNumber { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var random = new Random();
+        LuckyNumber = random.Next(1, 99);
+    }
+}

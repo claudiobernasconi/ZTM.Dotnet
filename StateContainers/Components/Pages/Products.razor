@@ -1,0 +1,39 @@
+﻿@using StateContainers.Services
+@inject ICartService CartService
+@rendermode InteractiveServer
+@page "/products"
+@implements IDisposable
+
+<h3>Products</h3>
+
+<p>You currently have @ItemCount products in your cart.</p>
+
+<ul>
+    <li><button class="btn btn-link" @onclick='() => AddToCart(1, "Banana")'>Banana</button></li>
+    <li><button class="btn btn-link" @onclick='() => AddToCart(2, "Apple")'>Apple</button></li>
+</ul>
+
+@code {
+    public int ItemCount { get; set; }
+
+    public void UpdateItemCount(int itemCount)
+    {
+        ItemCount = itemCount;
+    }
+
+    protected override void OnInitialized()
+    {
+        ItemCount = CartService.GetItemCount();
+        CartService.OnItemAdded += UpdateItemCount;
+    }
+
+    public void AddToCart(int id, string name)
+    {
+        CartService.AddItemToCart(new Item(id, name));
+    }    
+
+    public void Dispose()
+    {
+        CartService.OnItemAdded -= UpdateItemCount;
+    }
+}

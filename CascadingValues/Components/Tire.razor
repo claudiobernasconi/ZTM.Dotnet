@@ -1,0 +1,7 @@
+﻿<h3>Tire</h3>
+@BikeInfo.Brand @BikeInfo.Model
+
+@code {
+    [CascadingParameter(Name = "Bike")]
+    public required BikeInfo BikeInfo { get; set; }
+}

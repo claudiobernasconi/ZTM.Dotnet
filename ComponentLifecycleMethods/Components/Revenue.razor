@@ -1,0 +1,21 @@
+﻿@if (SuccessfulDay)
+{
+    <div style="color: darkgreen;">@Amount</div>
+}
+else
+{
+    <div style="color: darkred;">@Amount</div>
+}
+
+@code {
+    [Parameter]
+    public decimal Amount { get; set; }
+
+    public bool SuccessfulDay { get; set; }
+
+    public override Task SetParametersAsync(ParameterView parameters)
+    {
+        SuccessfulDay = parameters.GetValueOrDefault<decimal>(nameof(Amount)) > 500_000;
+        return base.SetParametersAsync(parameters);
+    }
+}

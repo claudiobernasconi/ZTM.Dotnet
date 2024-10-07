@@ -1,0 +1,20 @@
+﻿@page
+@model RazorPortfolio.Pages.AboutModel
+@{
+}
+
+<div class="text-center">
+    <h1>Claudio Bernasconi</h1>
+    <p>Software developer, YouTuber, technical writer, Instructor at Zero To Mastery.</p>
+    <p>
+        <a href="https://www.claudiobernasconi.ch" target="_blank">Website</a><br />
+        <a href="https://youtube.com/claudiobernasconi" target="_blank">YouTube</a>
+    </p>
+    <div>
+        <b>Programming languages:</b>
+        @foreach (var language in Model.ProgrammingLanguages)
+        {
+            <div>@language</div>
+        }
+    </div>
+</div>

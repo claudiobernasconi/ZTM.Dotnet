@@ -1,0 +1,26 @@
+﻿@page
+@model RazorForms.Pages.TagHelpersModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">New Employee</h1>
+
+    <form method="post">
+        <div style="display: flex; justify-content: center">
+            <div style="display: grid; grid-gap: 5px; width: 300px">
+                <input asp-for="Employee.Name" placeholder="@nameof(Model.Employee.Name)" class="form-control" />
+                <input asp-for="Employee.Email" placeholder="@nameof(Model.Employee.Email)" class="form-control" />
+                <input asp-for="Employee.Password" placeholder="@nameof(Model.Employee.Password)" class="form-control" />
+                <input asp-for="Employee.DateOfBirth" placeholder="@nameof(Model.Employee.DateOfBirth)" class="form-control" />
+                <div>
+                    <input asp-for="Employee.Newsletter" class="form-check-input" />
+                    <label asp-for="Employee.Newsletter" class="form-check-label"></label>
+                </div>
+
+                <button class="btn btn-primary">Create Employee</button>
+            </div>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>
+        <div>Tag Helpers: </div>
+        <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </p>
+    <p>
+        <div>Url Helper: Action </div>
+        <a href="@Url.Action("Privacy", "Home")">Privacy</a>
+    </p>
+    <p>
+        <div>Url Helper: Action Link </div>
+        <a href="@Url.ActionLink("Privacy", "Home")">Privacy</a>
+    </p>
+</div>

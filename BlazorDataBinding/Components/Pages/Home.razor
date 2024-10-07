@@ -1,0 +1,42 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Blazor Data Bindings</h1>
+
+@* One Way Data Binding *@
+<div>@Name</div>
+<div class="@Name"></div>
+<User Username="@Name"></User>
+
+@* Two Way Data Binding *@
+<input @bind="Username" />
+@Username
+
+@* Data Binding with @bind-Value *@
+<input @bind-value="Username" />
+<InputText @bind-Value="Username" />
+
+@* Event Bindings *@
+<button @onclick="OnClick">click me</button>
+<EditForm Model="User" OnSubmit="@OnSubmit" />
+
+@* Complex Objects *@
+<User Username="@User.Username"></User>
+
+@code {
+    public string Name { get; set; } = "Claudio";
+    public string Username { get; set; } = "cb";
+
+    public record Person(string Username);
+    public Person User { get; set; } = new Person("Claudio Bernasconi");
+
+    public void OnClick()
+    {
+    }
+
+    public void OnSubmit()
+    {
+    }
+}

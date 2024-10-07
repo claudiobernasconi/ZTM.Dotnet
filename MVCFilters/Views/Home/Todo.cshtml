@@ -1,0 +1,19 @@
+﻿@model TodoItem
+
+@{
+    ViewData["Title"] = "Todo List";
+}
+
+<h2>Todos</h2>
+
+<form asp-action="Create" method="post">
+    <div style="margin-bottom: 10px">
+        <label class="label" asp-for="Text"></label>
+        <input class="form-control" asp-for="Text" />
+    </div>
+    <div style="margin-bottom: 10px">
+        <label class="label" asp-for="UserId"></label>
+        <input type="text" class="form-control" asp-for="UserId" />
+    </div>
+    <button class="btn btn-primary" type="submit">Add</button>
+</form>

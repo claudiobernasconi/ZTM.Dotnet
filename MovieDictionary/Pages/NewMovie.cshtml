@@ -1,0 +1,21 @@
+﻿@page
+@model MovieDictionary.Pages.NewMovieModel
+@{
+    ViewData["Title"] = "New Movie";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Add a New Movie</h1>
+    <p><a asp-page="/Index">The best movies ever!</a></p>
+
+    <form method="post">
+        <div class="new-movie-container">
+            <div class="new-movie-fields">
+                <input asp-for="Movie.Title" placeholder="@nameof(Model.Movie.Title)" class="form-control" />
+                <input asp-for="Movie.Year" placeholder="@nameof(Model.Movie.Year)" class="form-control" />
+                <input asp-for="Movie.Rating" placeholder="@nameof(Model.Movie.Rating)" class="form-control" />
+                <button type="submit" class="btn btn-primary" style="width: 120px;margin-top: 5px">Add Movie</button>
+            </div>
+        </div>
+    </form>
+</div>

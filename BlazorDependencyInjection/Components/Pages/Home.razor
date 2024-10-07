@@ -1,0 +1,13 @@
+﻿@page "/"
+@using BlazorDependencyInjection.Services
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+@GreetingService.GetGreeting()
+
+@code {
+    [Inject]
+    public required IGreetingService GreetingService { get; set; }
+}

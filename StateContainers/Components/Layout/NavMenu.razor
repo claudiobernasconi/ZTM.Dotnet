@@ -1,0 +1,52 @@
+﻿@using StateContainers.Services
+@inject ICartService CartService
+@implements IDisposable
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">StateContainers</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="products">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Products
+            </NavLink>
+        </div>
+        <div class="text-white-50" style="margin-left: 20px">
+            <div>Products in Cart: @ItemCount</div>
+        </div>
+    </nav>
+</div>
+
+@code {
+    public int ItemCount { get; set; }
+
+    public void UpdateItemCount(int itemCount)
+    {
+        ItemCount = itemCount;
+        StateHasChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        CartService.OnItemAdded += UpdateItemCount;
+    }
+
+    public void Dispose()
+    {
+        CartService.OnItemAdded -= UpdateItemCount;
+    }
+}
+
