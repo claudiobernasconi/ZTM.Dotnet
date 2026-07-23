@@ -27,12 +27,11 @@ namespace UnitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(DivideByZeroException))]
         public void Calculator_Divide_ThrowsExceptionFor100And0()
         {
             var calculator = new Calculator();
 
-            calculator.Divide(100, 0);
+            Assert.ThrowsExactly<DivideByZeroException>(() => calculator.Divide(100, 0));
         }
     }
 }
