@@ -31,4 +31,4 @@ C# and .NET fundamentals haven't changed for a long time. Since the unification 
 * The **main** branch contains the code originally written for .NET 6 and .NET 7 as shown in the course.
 * The **net10** branch contains the updated code for .NET 10. (There are only two code changes):
    * [Home.razor](/BlazorMudBlazor/Components/Pages/Home.razor) in the BlazorMudBlazor project (due to changes in `MudBlazor`)
-   * [CalculatorTest.cs](/UnitTests/Calculator.cs) in the UnitTests project (due to changes in `MsTest`)
+   * [CalculatorTest.cs](/UnitTests/CalculatorTest.cs) in the UnitTests project (due to changes in `MsTest`)
