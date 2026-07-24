@@ -24,3 +24,11 @@ This bootcamp is designed to teach you everything you need to know about C# and 
 ## Getting Started
 1. Clone the repository
 2. Open the **ZTM.DotNet.sln** in Visual Studio or open the different projects in Visual Studio Code (or any other IDE).
+
+## Branches & .NET Versions
+C# and .NET fundamentals haven't changed for a long time. Since the unification of .NET with .NET 5 in 2020, the APIs haven't experienced many breaking changes.
+
+* The [main](/tree/main) branch contains the code originally written for .NET 6 and .NET 7 as shown in the course.
+* The [net10](/tree/net10) branch contains the updated code for .NET 10. (There are only two code changes):
+   * [Home.razor](/blob/net10/BlazorMudBlazor/Components/Pages/Home.razor) in the BlazorMudBlazor project (due to changes in `MudBlazor`)
+   * [CalculatorTest.cs](/blob/net10/UnitTests/Calculator.cs) in the UnitTests project (due to changes in `MsTest`)
