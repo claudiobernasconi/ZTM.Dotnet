@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32516.85
+# Visual Studio Version 18
+VisualStudioVersion = 18.11.12315.225 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{4BDF09BA-AA97-42C5-BFD9-54FBC5B1D59A}"
 EndProject
@@ -276,6 +276,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorMudBlazor", "BlazorMudBlazor\BlazorMudBlazor.csproj", "{F58066ED-D6DD-4765-AFCA-8F900AE6D785}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorJavaScriptInterop", "BlazorJavaScriptInterop\BlazorJavaScriptInterop.csproj", "{24B2EFDA-2F0C-4A74-8F68-2D7E23A94DF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionExpressions", "CollectionExpressions\CollectionExpressions.csproj", "{01F119F1-827A-4858-8B41-EE2E648A3062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimaryConstructors", "PrimaryConstructors\PrimaryConstructors.csproj", "{B494AF08-BE8B-4E13-B724-3A73C58A29BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -783,6 +787,14 @@ Global
 		{24B2EFDA-2F0C-4A74-8F68-2D7E23A94DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24B2EFDA-2F0C-4A74-8F68-2D7E23A94DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24B2EFDA-2F0C-4A74-8F68-2D7E23A94DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F119F1-827A-4858-8B41-EE2E648A3062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F119F1-827A-4858-8B41-EE2E648A3062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F119F1-827A-4858-8B41-EE2E648A3062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F119F1-827A-4858-8B41-EE2E648A3062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B494AF08-BE8B-4E13-B724-3A73C58A29BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B494AF08-BE8B-4E13-B724-3A73C58A29BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B494AF08-BE8B-4E13-B724-3A73C58A29BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B494AF08-BE8B-4E13-B724-3A73C58A29BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -914,6 +926,8 @@ Global
 		{2E8F3634-7B02-47F1-87A2-0E7512283B41} = {B75A1700-410B-4CBE-AF2C-D81CDD3B2ADA}
 		{F58066ED-D6DD-4765-AFCA-8F900AE6D785} = {B75A1700-410B-4CBE-AF2C-D81CDD3B2ADA}
 		{24B2EFDA-2F0C-4A74-8F68-2D7E23A94DF3} = {B75A1700-410B-4CBE-AF2C-D81CDD3B2ADA}
+		{01F119F1-827A-4858-8B41-EE2E648A3062} = {13BE33E5-3346-48EC-9963-A606E795E7D1}
+		{B494AF08-BE8B-4E13-B724-3A73C58A29BB} = {C69A07AA-6CAE-45FE-B99F-50852E00F0B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {087D859F-CCDC-49EC-BBC5-69A06CAB7DFF}
