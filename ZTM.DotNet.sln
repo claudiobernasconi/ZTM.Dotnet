@@ -283,6 +283,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimaryConstructors", "Prim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQueue", "PriorityQueue\PriorityQueue.csproj", "{0135FC93-519A-4F1B-BB67-C61AA4646FE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldKeyword", "FieldKeyword\FieldKeyword.csproj", "{700578E7-AE45-424A-8CBD-DA2F0A14B67D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -801,6 +803,10 @@ Global
 		{0135FC93-519A-4F1B-BB67-C61AA4646FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0135FC93-519A-4F1B-BB67-C61AA4646FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0135FC93-519A-4F1B-BB67-C61AA4646FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700578E7-AE45-424A-8CBD-DA2F0A14B67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700578E7-AE45-424A-8CBD-DA2F0A14B67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700578E7-AE45-424A-8CBD-DA2F0A14B67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700578E7-AE45-424A-8CBD-DA2F0A14B67D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -935,6 +941,7 @@ Global
 		{01F119F1-827A-4858-8B41-EE2E648A3062} = {13BE33E5-3346-48EC-9963-A606E795E7D1}
 		{B494AF08-BE8B-4E13-B724-3A73C58A29BB} = {C69A07AA-6CAE-45FE-B99F-50852E00F0B0}
 		{0135FC93-519A-4F1B-BB67-C61AA4646FE4} = {13BE33E5-3346-48EC-9963-A606E795E7D1}
+		{700578E7-AE45-424A-8CBD-DA2F0A14B67D} = {C69A07AA-6CAE-45FE-B99F-50852E00F0B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {087D859F-CCDC-49EC-BBC5-69A06CAB7DFF}
